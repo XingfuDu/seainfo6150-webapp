@@ -12,7 +12,7 @@ const DynamicArticle = (props) => {
               {props.article.authorEmail}</a>)
             <br/>
           </address>
-          <time dateTime={props.article.displayDate}>{props.article.displayDate}</time>
+          <time dateTime={props.article.timeStamp}>{props.article.displayDate}</time>
         </header>
       }
       <HTMLText text={props.article.text} />
