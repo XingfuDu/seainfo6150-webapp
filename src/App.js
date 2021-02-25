@@ -10,6 +10,10 @@ function App() {
     const fetchData = async () => {
       let responseJson;
       // put data fetching code here!
+      const response = await fetch(
+        "http://demo1390455.mockable.io/articles"
+      );
+      responseJson=await response.json();
       setFetchedData(responseJson);
     };
 
@@ -17,6 +21,7 @@ function App() {
       fetchData();
     }
   }, [fetchedData]);
+  console.dir(fetchedData)
 
   return isEmpty(fetchedData) ? null : (
     <div className="App">
