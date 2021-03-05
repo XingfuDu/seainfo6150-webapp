@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HTMLText from "../HTMLText/HTMLText";
 
 const DynamicArticle = (props) => {
@@ -6,6 +7,7 @@ const DynamicArticle = (props) => {
     <article>
       {/* add extra html with javascript attributes here */
         <header>
+          <Link to={props.url}>Back</Link>
           <h1>{props.article.title}</h1>
           <address>
             by {props.article.author} (<a href={"mailto:"+props.article.authorEmail}>

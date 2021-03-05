@@ -1,12 +1,13 @@
 import React, { useEffect, useState} from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import DynamicArticle from "./DynamicArticle/DynamicArticle.jsx";
 import ArticleList from "./ArticleList/ArticleList.jsx";
 import { isEmpty } from "lodash";
 
 
 function App() {
-  const [fetchedData, setFetchedData, useRouteMatch] = useState();
+  let { url } = useRouteMatch();
+  const [fetchedData, setFetchedData] = useState();
   useEffect(() => {
     const fetchData = async () => {
       let responseJson;
@@ -42,12 +43,12 @@ function App() {
               }
             })
             return (<div> 
-                        <a href='/articlelist/'>Back</a>
-                        <DynamicArticle article={Object.values(fetchedData)[index]} />
+                        {/* <Link to={`${url}articlelist/`}>Back</Link> */}
+                        <DynamicArticle article={Object.values(fetchedData)[index]} url={`${url}articlelist/`} />
                     </div>);
           }}
         />
-        <Route path="/">
+        <Route path="/articlelist">
           <ArticleList content={Object.values(fetchedData)}/>  
         </Route>
       </Switch>
