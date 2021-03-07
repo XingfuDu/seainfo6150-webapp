@@ -5,7 +5,7 @@ const ArticleList = (props) => {
     const lists = (
         <ul>
             {props.content.map(prop=>{
-                return <li><ArticleListItem content={prop}/></li>;
+                return <li key={prop.slug}><ArticleListItem content={prop}/></li>;
             })}
         </ul>
     );

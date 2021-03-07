@@ -25,7 +25,7 @@ function App() {
   }, [fetchedData]);
 
 
-  return isEmpty(fetchedData) ? null : (
+  return isEmpty(fetchedData) ? (<div>You have no data!</div>) : (
     <div className="App">
       <Switch>
         <Route
@@ -42,10 +42,8 @@ function App() {
                 index=i;
               }
             })
-            return (<div> 
-                        {/* <Link to={`${url}articlelist/`}>Back</Link> */}
-                        <DynamicArticle article={Object.values(fetchedData)[index]} url={`${url}articlelist/`} />
-                    </div>);
+            return (<DynamicArticle article={Object.values(fetchedData)[index]} 
+                                                  url={`${url}articlelist/`} />);
           }}
         />
         <Route path="/articlelist">
