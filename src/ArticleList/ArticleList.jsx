@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ArticleListItem from "../ArticleListItem/ArticleListItem.jsx";
-import './ArticleList.module.css'
+import classes from './ArticleList.module.css'
 
 const ArticleList = (props) => {
   return (
     <div>
-      <ul>
+      <ul className={classes.ul}>
         {props.articles.map((article) => (
           <ArticleListItem article={article} key={article.slug} />
         ))}

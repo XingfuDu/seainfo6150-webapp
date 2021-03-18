@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ArticleTextToggleButton from '../ArticleTextToggleButton/ArticleTextToggleButton';
 import { Link } from 'react-router-dom';
-import './ArticleListItem.module.css';
+import classes from './ArticleListItem.module.css';
 
 const ArticleListItem = (props) => {
 	const [ itemState, setItemState ] = useState({
@@ -15,7 +15,7 @@ const ArticleListItem = (props) => {
 			setItemState({
 				details: (
 					<div>
-						<time dateTime={props.article.timeStamp}>{props.article.displayDate}</time>
+						<time className={classes.time} dateTime={props.article.timeStamp}>{props.article.displayDate}</time>
 						<p>{props.article.shortText}</p>
 					</div>
 				),
@@ -32,10 +32,10 @@ const ArticleListItem = (props) => {
 	};
 
 	return (
-		<li>
+		<li className={classes.li}>
 			<article>
 				<h2>
-					<Link className="link" to={'/articlelist/' + props.article.slug}>{props.article.title}</Link>
+					<Link className={classes.link} to={'/articlelist/' + props.article.slug}>{props.article.title}</Link>
 				</h2>
 				{itemState.details}
 				<ArticleTextToggleButton clicked={toggleButtonHandler} buttonText={itemState.buttonText} />
