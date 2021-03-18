@@ -1,0 +1,26 @@
+li {
+	border-radius: 1em;
+	border: 1px solid red;
+	margin-bottom: 30px;
+	padding: 0px 10px 20px;
+	list-style: none;
+	background-image: linear-gradient(to right, rgba(255, 0, 0,0.6), white 5%);
+} 
+h2 {
+	color: red;
+
+}
+button {
+	color: white;
+	background-color: red;
+	padding: 10px;
+	border-radius: 10px;
+}
+a {
+    color: red;
+    text-decoration-color: red;
+}
+time {
+    font-weight: bold;
+}
+

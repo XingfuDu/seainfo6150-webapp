@@ -1,6 +1,7 @@
 import React from "react";
 import HTMLText from "../HTMLText/HTMLText.jsx";
 import { Link } from "react-router-dom";
+import './DynamicArticle.module.css'
 
 const DynamicArticle = (props) => {
   return (

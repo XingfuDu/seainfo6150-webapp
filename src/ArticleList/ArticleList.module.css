@@ -1,0 +1,8 @@
+ul {
+    background-color: gray;
+    border-radius: 20px;
+    padding: 20px;
+    border: dashed 1px black;
+    box-shadow: 5px 5px 10px 10px rgba(255, 0, 0,0.6);
+    font-family: sans-serif;
+}
