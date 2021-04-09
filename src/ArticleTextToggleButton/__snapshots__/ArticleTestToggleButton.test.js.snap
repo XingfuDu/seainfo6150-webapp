@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleList tests renders correctly for show less 1`] = `
+<div>
+  <button
+    class="button"
+  >
+    Show less
+  </button>
+</div>
+`;
+
+exports[`ArticleList tests renders correctly for show more 1`] = `
+<div>
+  <button
+    class="button"
+  >
+    Show more
+  </button>
+</div>
+`;
